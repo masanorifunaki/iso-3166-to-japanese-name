@@ -1,6 +1,6 @@
 {
   "name": "iso-3166-to-japanese-name",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "src/index.js",
   "author": "舟木正憲 <funakimfunaki@gmail.com>",
   "license": "MIT",

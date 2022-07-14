@@ -20,6 +20,12 @@ jobs:
         with:
           node-version: 14.x
           registry-url: 'https://registry.npmjs.org'
+      # Install dependencies
+      - name: install-dependencies
+        run: yarn --frozen-lockfile
+      # Run test
+      - name: test
+        run: yarn test
 
       # Get current package version
       - name: current-package-version
@@ -34,6 +40,16 @@ jobs:
           git_commit_sha: ${{ github.sha }}
           git_tag_prefix: ''
           version: ${{ env.CURRENT_PACKAGE_VERSION }}
+
+      # Create release draft
+      - name: release-draft
+        uses: release-drafter/release-drafter@v5
+        with:
+          name: ${{ env.CURRENT_PACKAGE_VERSION }}
+          version: ${{ env.CURRENT_PACKAGE_VERSION }}
+          tag: ${{ env.CURRENT_PACKAGE_VERSION }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Publish to npm
       - name: publish-to-npm
