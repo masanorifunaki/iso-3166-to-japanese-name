@@ -1,4 +1,4 @@
-const ISO3166MAP = {
+const ISO3166MAPPING = {
   AD: 'アンドラ',
   AE: 'アラブ首長国連邦',
   AF: 'アフガニスタン',
@@ -258,7 +258,7 @@ function convertToJpnName (isoCode) {
     throw new Error('Code must specify 2 characters');
   }
 
-  const jpnName = ISO3166MAP[isoCode];
+  const jpnName = ISO3166MAPPING[isoCode];
 
   if (typeof jpnName === 'undefined') {
     throw new Error('Incorrect code');
