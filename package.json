@@ -1,0 +1,14 @@
+{
+  "name": "iso-3166-to-japanese-name",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "舟木正憲 <funakimfunaki@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
