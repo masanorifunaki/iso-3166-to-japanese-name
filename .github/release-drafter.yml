@@ -13,6 +13,8 @@ categories:
     label: 'chore'
   - title: '📝 Document'
     label: 'documentation'
+  - title: '♻️ Refactor'
+    label: 'refactor'
 
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 change-title-escapes: '\<*_&'

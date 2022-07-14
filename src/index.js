@@ -249,7 +249,7 @@ const ISO3166MAPPING = {
   ZW: 'ジンバブエ',
 };
 
-function convertToJpnName (isoCode) {
+const convertToJpnName = (isoCode) => {
   if (!isoCode) {
     throw new Error('Empty code');
   }
@@ -267,4 +267,4 @@ function convertToJpnName (isoCode) {
   return jpnName;
 }
 
-module.exports = convertToJpnName
+module.exports.convertToJpnName = convertToJpnName

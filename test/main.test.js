@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const convertToJpnName = require('../src/index.js');
+const { convertToJpnName } = require('../src/index.js');
 
 describe('convertToJpnName', () => {
   it('should pass iso3166 code as argument', () => {
