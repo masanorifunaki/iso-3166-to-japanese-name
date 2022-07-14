@@ -20,6 +20,12 @@ jobs:
         with:
           node-version: 14.x
           registry-url: 'https://registry.npmjs.org'
+      # Install dependencies
+      - name: install-dependencies
+        run: yarn --frozen-lockfile
+      # Run test
+      - name: test
+        run: yarn test
 
       # Get current package version
       - name: current-package-version
